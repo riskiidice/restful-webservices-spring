@@ -2,12 +2,15 @@ package com.example.demo.user;
 
 import java.util.Date;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
 public class User {
 	
 	private Integer id;
-	
+	@Size(min=2, message="Please Enter Enter Mininum 2 Character")
 	private String name;
-	
+	@Past
 	private Date birthDate;
 
 	protected User() {
